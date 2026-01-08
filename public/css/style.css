@@ -1,0 +1,118 @@
+/* Custom Styles for Tabler */
+@import url('https://rsms.me/inter/inter.css');
+
+:root {
+    --tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+}
+
+body {
+    font-feature-settings: "cv03", "cv04", "cv11";
+}
+
+/* Sidebar active state */
+.navbar-vertical .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+}
+
+.navbar-vertical .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Card hover effect */
+.card-link-pop {
+    transition: all 0.2s ease-in-out;
+}
+
+.card-link-pop:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Table enhancements */
+.table-vcenter td {
+    vertical-align: middle;
+}
+
+/* Avatar with initials */
+.avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    background: var(--tblr-primary);
+    color: #fff;
+}
+
+/* Print styles */
+@media print {
+    .page-wrapper {
+        margin-left: 0 !important;
+    }
+    
+    .navbar-vertical,
+    .page-header,
+    .footer,
+    .btn,
+    .no-print {
+        display: none !important;
+    }
+    
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #ddd;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+    
+    .btn-list .btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Custom badge colors */
+.badge.badge-outline {
+    border: 1px solid currentColor;
+    background: transparent;
+}
+
+/* Status dots animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.status-dot-animated {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Empty state styling */
+.empty {
+    padding: 3rem 1rem;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    color: var(--tblr-muted);
+    margin-bottom: 1rem;
+}
+
+.empty-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.empty-subtitle {
+    font-size: 0.875rem;
+}
